@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Incident Report Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        textarea, input[type=text] {
+            width: 100%;
+            padding: 0.7em;
+            margin-top: 0.5em;
+        }
+        input[type=submit] {
+            padding: 0.7em 1.5em;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            font-size: 1em;
+            margin-top: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Incident Details</h1>
+    <form method="post" action="/predict">
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label for="text">Text:</label><br>
+        <textarea name="text" rows="10" required></textarea><br><br>
+
+        <input type="submit" value="Classify Product">
+    </form>
+</body>
+</html>
